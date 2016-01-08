@@ -1,0 +1,84 @@
+AUDITOR:
+	- Datos de la empresa a auditar: 
+		Agregar campo ORGANIGRAMA (permita subir y mostrar imagen del organigrama de la empresa)
+
+----------------------------------------------------------------
+
+Respecto al registro de un plan de auditoría
+http://localhost/Proyecto/sites/nuevo-plan.php?id=1
+
+- EN EL TITULO SOLO VA EL NOMBRE DE LA EMPRESA y OCULTAR EL ID DE LA EMPRESA.
+
+- En la parte de ALINEAMIENTOS debería ir de título
+	"ALINEAMIENTO DE LA AUDITORIA A LA ESTRATEGIA DEL NEGOCIO", 
+y mostrar una tabla:
+	ESTRATEGIA DEL NEGOCIO   |   ALINEAMIENTO   |   OPCIONES
+              texto			        texto          botones: agregar, editar y eliminar
+
+- En la parte de ACLARACIONES mostrar 2 subtítulos
+	de título: ACLARACIONES
+	como subtítulos:
+ 	- SI SE REALIZARA (texto)
+ 	- NO SE REALIZARA (texto)
+
+- Después de LIMITACIONES debe ir un NUEVO CAMPO: 
+	PLAN DE PROYECTOS
+	Que sería la sgte tabla:
+	TAREA   |  FECHA INICIO  | FECHA FINAL |  RESPONSABLE  | OPCIONES
+    texto     	   0/0/0          1/1/1      CBO AUDITORES   botones: add, edit y elim
+
+- campo nuevo: ENTREGABLES (texto)
+
+- campo nuevo: ENTREVISTADOS (tabla)
+	NOMBRE   |   CARGO   |   OPCIONES
+     texto       texto      botones: add, edit y elim
+
+----------------------------------------------------------------
+
+Respecto a mostrar la info de una empresa determinada
+http://localhost/Proyecto/sites/empresa.php?id=1
+
+- La NORMATIVA debe mostrarse en 1 cuadro aparte.
+El título sería NORMATIVA, aquí debe permitir ingresar NORMATIVA INTERNACIONAL, NACIONAL E INSTITUCIONAL
+
+  TITULO DEL CUADRO: Datos de la Normativa
+	- N. INTERNACIONAL
+	- N. NACIONAL
+	- N. INSTITUCIONAL
+			BOTÓN: EDITAR NORMATIVA
+
+- Agregar un cuadro igual al de NORMATIVA, llamado "PRUEBAS DE CUMPLIMIENTO Y SUSTANTIVAS"
+Con los siguientes campos:
+   PRUEBAS DE CUMPLIMIENTO Y SUSTANTIVAS:
+	- NOMBRE (texto)
+	- INSTITUCION (texto)
+	- ENTREVISTADO (CBO ENTREVISTADOS)
+	- FECHA INICIO (date)   
+	- FECHA FINAL (date)	
+	- Botón para AGREGAR PREGUNTAS.
+		Registrar los siguientes campos:
+		PREGUNTA |   RESPONSABLE   |    PASOS    | OPCIONES
+		 texto    	CBO AUDITORES     (texto)	    botones: add, edit y elim
+  
+- Agregar un cuadro igual al de NORMATIVA, llamado "CRITERIOS DE EVALUACION" 
+Con los siguientes campos:
+ 	- CRITERIOS:
+   		  CRITERIO |     OPCIONES
+           texto     botones: add, edit y elim
+    
+ - Agregar un título al mismo nv de "PLANES DE AUDITORIA", 
+ con el nombre "EJECUCION DE LA AUDITORIA", con los sgtes campos:
+	- CUESTIONARIO:
+		SELECCIONAR PRUEBA DE CUMPLIMIENTO: (hacer click en el elemento correspondiente)
+			En una nueva pagina:
+			El listado de las preguntas para marcar (si/no) y sus observaciones y evidencias
+			PREGUNTA    |   RESPUESTA        | OBSERVACION   
+			texto	      marcar SI()  NO()      texto		
+ 	
+	- CALIFICACION:
+		- ENTREVISTADO: (CBO ENTREVISTADOS)
+		- SELECCIONAR CRITERIO: (hacer click en el elemento correspondiente)
+			En una nueva pagina:
+			El listado de los criterios para marcar si o no 
+			CRITERIO  |   RESPUESTA       
+			 texto	    marcar SI()  NO()
